@@ -2,7 +2,6 @@
 
 - [ ] 配置 wlogout
 - [ ] 配置 wofi
-- [ ] 配置 mako
 - [ ] 配置 alacritty
 - [ ] 配置 oh-my-posh
 - [ ] 配置 thunar
