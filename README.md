@@ -1,7 +1,6 @@
 # HyprDotfiles
 
 - [ ] 配置 wlogout
-- [ ] 配置 waybar
 - [ ] 配置 wofi
 - [ ] 配置 mako
 - [ ] 配置 alacritty
