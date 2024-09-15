@@ -1,7 +1,5 @@
 # HyprDotfiles
 
-- [ ] 配置 wofi
-- [ ] 配置 alacritty
 - [ ] 配置 oh-my-posh
 - [ ] 配置 thunar
 - [ ] 配置 hypreco
