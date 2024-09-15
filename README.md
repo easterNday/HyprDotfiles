@@ -1,6 +1,5 @@
 # HyprDotfiles
 
-- [ ] 配置 wlogout
 - [ ] 配置 wofi
 - [ ] 配置 alacritty
 - [ ] 配置 oh-my-posh

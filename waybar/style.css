@@ -27,7 +27,8 @@ window#waybar {
 #battery,
 #network,
 #tray,
-#backlight {
+#backlight,
+#custom-powermenu {
   background-color: @black;
   color: @white;
   border-radius: 1rem;
@@ -198,4 +199,16 @@ window#waybar {
 
 #tray>.needs-attention {
   -gtk-icon-effect: highlight;
+}
+
+/* -----------------------------------------------------
+ * Power Menu
+ * ----------------------------------------------------- */
+#custom-powermenu {
+  border-radius: 1rem;
+  background-color: @red;
+  background-image: url('/home/easternday/.config/hypr/icons/lock/reboot.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px;
 }

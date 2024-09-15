@@ -20,7 +20,8 @@
         "network",
         "backlight",
         "wireplumber",
-        "battery"
+        "battery",
+        "custom/powermenu"
     ],
     // Left
     "custom/appmenu": {
@@ -130,7 +131,7 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon}   {capacity}%",
+        "format": "{icon}  {capacity}%",
         "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
         "format-alt": "{time} {icon}",
@@ -142,6 +143,12 @@
             ""
         ]
     },
+    "custom/powermenu":{
+        "format": "  ",
+        "on-click": "/home/easternday/.config/hypr/wlogout/wlogout.sh",
+        "on-click-right": "/home/easternday/.config/hypr/wlogout/wlogout.sh",
+        "tooltip-format": "单击进行电源操作"
+    }
     // Useless
     // "cpu": {
     //     "format": "  {usage}% ",
