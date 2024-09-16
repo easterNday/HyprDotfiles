@@ -26,7 +26,7 @@ const AppItem = app => Widget.Button({
     }),
 })
 
-const Applauncher = ({ width = 500, height = 500, spacing = 12 }) => {
+const Applauncher = ({ spacing = 12 }) => {
     // list of application buttons
     let applications = query("").map(AppItem)
 
@@ -103,7 +103,6 @@ export const Launcher = () => Widget.Window({
     keymode: 'on-demand',
     anchor: ["left", "top", "bottom"],
     child: Applauncher({
-        width: 500,
         spacing: 12,
     }),
     setup: self => self.keybind("Escape", () => {

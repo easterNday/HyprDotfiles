@@ -7,8 +7,7 @@
     margin: 1.5rem;
     border-radius: 1.2rem;
     border: 0.1rem solid @blue;
-    background-color: @black;
-    opacity: 0.9;
+    background-color: alpha(@black, 0.9);
     min-width: 30rem;
 }
 
@@ -19,7 +18,9 @@
     border-radius: 1.2rem;
     color: @black;
     border: 0.1rem solid @red;
-    background-color: alpha(@blue, 0.6);
+    background-color: alpha(@white, 0.6);
+    font-size: 1.6em;
+    font-weight: bold;
 }
 
 .launcher .scroll button {
