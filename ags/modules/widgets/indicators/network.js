@@ -1,4 +1,5 @@
-const network = await Service.import('network')
+const network = await Service.import('network');
+const { query } = await Service.import("applications");
 
 // {
 //     "menu": {
@@ -58,29 +59,12 @@ const network = await Service.import('network')
 //     "icon": "nm-signal-75"
 // }
 
-const WifiIndicator = Widget.Button({
-    child: Widget.Icon({
-        icon: network.wifi.bind('icon_name'),
-    }),
-    // TODO: 点击左键连接WIFI
-    // onPrimaryClick: (_, event) => item.activate(event),
-    onSecondaryClick: () => Utils.exec('nm-connection-editor'),
-    tooltip_text: network.wifi.internet === "connected" ? network.wifi.ssid : '无连接',
-})
-
-const WiredIndicator = Widget.Button({
-    child: Widget.Icon({
-        icon: network.wired.bind('icon_name'),
-    }),
-    // onClicked: () => Utils.exec('bash -c "XDG_CURRENT_DESKTOP="gnome" gnome-control-center bluetooth"'),
-    tooltip_text: network.wired.internet === "connected" ? network.wifi.ssid : '无连接',
-})
-
-export const NetworkIndicator = Widget.Stack({
+export const NetworkIndicator = () => Widget.Button({
     class_name: "network indicator",
-    children: {
-        wifi: WifiIndicator,
-        wired: WiredIndicator,
-    },
-    shown: network.bind('primary').as(p => p || 'wifi'),
+    child: Widget.Icon({
+        icon: network.bind('primary').as(p => p === 'wired' ? network.wired.icon_name : network.wifi.icon_name),
+    }),
+    onPrimaryClick: (_, event) => { if (network.primary !== 'wired') network.toggleWifi() },
+    onSecondaryClick: () => query('nm-connection-editor')[0].launch(),
+    tooltip_text: network.bind('primary').as(p => p === 'wired' ? (network.wired.internet === "connected" ? '已连接' : '无连接') : (network.wifi.internet === "connected" ? network.wifi.ssid : '无连接')),
 })

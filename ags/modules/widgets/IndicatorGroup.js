@@ -9,8 +9,8 @@ export const indicatorGroup = () => Widget.Box({
     class_name: "indicator-group",
     spacing: 0,
     children: [
-        bluetoothIndicator,
-        NetworkIndicator,
+        bluetoothIndicator(),
+        NetworkIndicator(),
         brightnessIndicator(),
         volumeIndicator(),
         batteryProgress()

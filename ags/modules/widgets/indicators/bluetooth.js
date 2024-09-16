@@ -1,9 +1,11 @@
 const bluetooth = await Service.import('bluetooth')
+const { query } = await Service.import("applications");
 
-export const bluetoothIndicator = Widget.Button({
+export const bluetoothIndicator = () => Widget.Button({
     class_name: "bluetooth indicator",
     child: Widget.Icon(),
-    onClicked: () => Utils.exec('blueberry'),
+    onClicked: () => query('blueberry')[0].launch(),
+    onHover: (self, _) => {self.toggleClassName('indicator-hover', true)}
 }).
     hook(bluetooth, (self, address) => {
         self.child.icon = `bluetooth-${bluetooth.enabled ? 'active' : 'disabled'}-symbolic`;

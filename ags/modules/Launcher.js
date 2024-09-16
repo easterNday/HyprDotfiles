@@ -1,4 +1,3 @@
-import Gtk from 'gi://Gtk'
 const { query } = await Service.import("applications")
 
 const WINDOW_NAME = "launcher"

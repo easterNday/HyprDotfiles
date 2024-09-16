@@ -1,6 +1,7 @@
 .bar-bg * {
     all: unset;
 }
+
 .bar-bg {
     all: unset;
     background: rgba(0, 0, 0, 0);
@@ -65,6 +66,7 @@
 
 .clock {
     font-weight: bold;
+    color: @yellow;
     background-color: @black;
 }
 
@@ -95,6 +97,7 @@
 .indicator {
     all: unset;
     padding: 0 1rem;
+    background-color: @black;
 }
 
 .indicator:first-child {
@@ -111,32 +114,22 @@
     border-bottom-right-radius: 1rem;
 }
 
-.bluetooth {
-    color: @black;
-    background-color: @blue;
-}
+/* .indicator-group .bluetooth:hover,
+.indicator-group .network:hover,
+.indicator-group .brightness:hover,
+.indicator-group .volume:hover,
+.indicator-group .battery:hover {
+    background: @white;
+    border-radius: 2rem;
+    min-width: 5rem;
+    transition: all 0.3s ease-in-out;
+    color: @yellow;
+} */
 
-.network {
-    color: @black;
-    background-color: @orange;
-}
-
-.brightness {
-    background-color: @black;
-    color: @white;
-}
-
-
-.volume {
-    background-color: @blue;
-    color: @black;
-}
-
-.battery {
-    background-color: @white;
-    color: @black;
-}
-
-.battery.charging{
-    background-color: @red;
+.indicator-group .indicator:hover {
+    background: @white;
+    border-radius: 1rem;
+    min-width: 5rem;
+    transition: all 0.3s ease-in-out;
+    color: @yellow;
 }

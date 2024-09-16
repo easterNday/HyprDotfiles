@@ -1,9 +1,10 @@
 const audio = await Service.import('audio');
+const { query } = await Service.import("applications");
 
 export const volumeIndicator = () => Widget.Button({
     class_name: 'volume indicator',
     child: Widget.Icon(),
-    onClicked: () => Utils.exec('pavucontrol'),
+    onClicked: () => query('pavucontrol')[0].launch(),
 }).hook(audio.speaker, self => {
     const vol = Math.floor(audio.speaker.volume * 100);
     const iconMap = [
