@@ -7,8 +7,11 @@ const BRIGHTNESS_THRESHOLDS = [
     { threshold: Infinity, icon: 'display-brightness-high-symbolic' }
 ];
 
-export const brightnessIndicator = () => Widget.Icon({
+export const brightnessIndicator = () => Widget.Button({
     class_name: "brightness indicator",
+    child: Widget.Icon(),
+    // TODO: 点击显示设置面板
+    // onClicked: () => Utils.exec('bash -c "XDG_CURRENT_DESKTOP="gnome" gnome-control-center bluetooth"'),
 }).hook(brightness, (self) => {
     const icon = [
         [0.8, 'high'],
@@ -17,6 +20,8 @@ export const brightnessIndicator = () => Widget.Icon({
         [0, 'off'],
     ].find(([threshold]) => threshold <= brightness.screen_value)?.[1];
 
-    self.icon = `display-brightness-${icon}-symbolic`;
-    self.tooltip_text = `亮度 ${brightness.screen_value * 100}%`;
+    self.child.icon = `display-brightness-${icon}-symbolic`;
+    self.tooltip_text = `亮度 ${brightness.screen_value * 100}%`
 }, 'screen-changed')
+
+
