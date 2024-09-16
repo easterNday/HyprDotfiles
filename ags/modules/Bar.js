@@ -1,10 +1,10 @@
-import { warframe_logo } from "../icons/warframe.js"
 import { Workspaces } from "./widgets/Workspaces.js"
 
 import { Clock } from "./widgets/Clock.js"
 
 import { sysTray } from './widgets/Tray.js'
 import { indicatorGroup } from "./widgets/IndicatorGroup.js"
+import { AdvancedSettings } from "./widgets/AdvancedSettings.js"
 
 // layout of the bar
 function Left() {
@@ -12,12 +12,23 @@ function Left() {
         spacing: 8,
         children: [
             Widget.Button({
-                on_clicked: () => Utils.execAsync(['ags', '--toggle-window', 'launcher']),
-                child: warframe_logo
+                class_name: "logo",
+                child: Widget.Box({
+                    children: [
+                        Widget.Icon({
+                            size: 24,
+                            icon: `${App.configDir}/icons/warframe.svg`,
+                        }),
+                        Widget.Label({
+                            label: "Warframe",
+                        }),
+                    ],
+                }),
+                onClicked: () => Utils.execAsync(['ags', '--toggle-window', 'launcher']),
             }),
-        Workspaces()
+            Workspaces()
         ],
-})
+    })
 }
 
 function Center() {
@@ -35,7 +46,8 @@ function Right() {
         spacing: 8,
         children: [
             sysTray(),
-            indicatorGroup()
+            indicatorGroup(),
+            AdvancedSettings()
         ],
     })
 }
