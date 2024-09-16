@@ -1,10 +1,10 @@
 import { warframe_logo } from "../icons/warframe.js"
-import { Workspaces } from "./widgets/workspaces.js"
+import { Workspaces } from "./widgets/Workspaces.js"
 
-import { Clock } from "./widgets/clock.js"
+import { Clock } from "./widgets/Clock.js"
 
-import { sysTray } from './widgets/tray.js'
-import { indicatorGroup } from "./widgets/indicator-group.js"
+import { sysTray } from './widgets/Tray.js'
+import { indicatorGroup } from "./widgets/IndicatorGroup.js"
 
 // layout of the bar
 function Left() {

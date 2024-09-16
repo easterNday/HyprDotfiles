@@ -1,12 +1,12 @@
-import { Bar } from "./modules/bar.js"
-import { Launcher } from "./modules/launcher.js"
-import { Notifications } from "./modules/popups/Notification.js"
+import { Bar } from "./modules/Bar.js"
+import { Launcher } from "./modules/Launcher.js"
+import { Notifications } from "./modules/popups/Notifications.js"
 
 App.config({
     style: "./style.css",
     windows: [
         Bar(),
-        Launcher,
+        Launcher(),
         Notifications()
     ]
 })
