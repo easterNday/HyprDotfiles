@@ -1,6 +1,7 @@
+import Gtk from 'gi://Gtk'
 const { query } = await Service.import("applications")
 
-const WINDOW_NAME = "applauncher"
+const WINDOW_NAME = "launcher"
 
 /** @param {import('resource:///com/github/Aylur/ags/service/applications.js').Application} app */
 const AppItem = app => Widget.Button({
@@ -46,7 +47,7 @@ const Applauncher = ({ width = 500, height = 500, spacing = 12 }) => {
     // search entry
     const entry = Widget.Entry({
         hexpand: true,
-        css: `margin-bottom: ${spacing}px;`,
+        class_name: "search",
 
         // to launch the first item on Enter
         on_accept: () => {
@@ -64,19 +65,23 @@ const Applauncher = ({ width = 500, height = 500, spacing = 12 }) => {
         }),
     })
 
+    const scroll = Widget.Scrollable({
+        class_name: "scroll",
+        hscroll: "never",
+        vscroll: 'always',
+        vexpand: true,
+        child: list,
+    })
+
+    // scroll.set_valign(Gtk.Align.FILL);
+
     return Widget.Box({
         class_name: 'launcher',
         vertical: true,
         children: [
             entry,
 
-            // wrap the list in a scrollable
-            Widget.Scrollable({
-                hscroll: "never",
-                css: `min-width: ${width}px;`
-                    + `min-height: ${height}px;`,
-                child: list,
-            }),
+            scroll
         ],
         setup: self => self.hook(App, (_, windowName, visible) => {
             if (windowName !== WINDOW_NAME)
@@ -92,9 +97,9 @@ const Applauncher = ({ width = 500, height = 500, spacing = 12 }) => {
     })
 }
 
-// there needs to be only one instance
 export const Launcher = Widget.Window({
     name: WINDOW_NAME,
+    class_name: "launcher-bg",
     visible: false,
     keymode: 'on-demand',
     anchor: ["left", "top", "bottom"],

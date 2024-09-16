@@ -12,7 +12,7 @@ function Left() {
         spacing: 8,
         children: [
             Widget.Button({
-                on_clicked: () => Utils.execAsync(['ags', '--toggle-window', 'applauncher']),
+                on_clicked: () => Utils.execAsync(['ags', '--toggle-window', 'launcher']),
                 child: warframe_logo
             }),
         Workspaces()

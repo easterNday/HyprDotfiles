@@ -1,3 +1,6 @@
+.bar-bg * {
+    all: unset;
+}
 .bar-bg {
     all: unset;
     background: rgba(0, 0, 0, 0);

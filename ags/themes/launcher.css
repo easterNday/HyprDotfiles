@@ -1,7 +1,28 @@
+.launcher-bg {
+    background: transparent;
+}
+
 .launcher {
     all: unset;
     margin: 1.5rem;
     border-radius: 1.2rem;
     border: 0.1rem solid @blue;
     background-color: @black;
+    opacity: 0.9;
+    min-width: 30rem;
+}
+
+.launcher .search {
+    all: unset;
+    margin: 1.5rem;
+    padding: 1rem;
+    border-radius: 1.2rem;
+    color: @black;
+    border: 0.1rem solid @red;
+    background-color: alpha(@blue, 0.6);
+}
+
+.launcher .scroll button {
+    margin: 0 1rem;
+    border-radius: 2rem;
 }
