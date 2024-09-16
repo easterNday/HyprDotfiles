@@ -12,5 +12,7 @@ const SysTrayItem = item => Widget.Button({
 
 export const sysTray = () => Widget.CenterBox({
     class_name: "tray",
-    children: systemtray.bind('items').as(i => i.map(SysTrayItem))
+    centerWidget: Widget.Box({
+        children: systemtray.bind('items').as(i => i.map(SysTrayItem))
+    })
 })

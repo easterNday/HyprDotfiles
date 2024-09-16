@@ -75,6 +75,7 @@
 
 .tray button {
     all: unset;
+    margin: 0 0.6rem;
 }
 
 .tray button:hover {
@@ -82,6 +83,7 @@
     border: 1px solid @blue;
     border-radius: 3rem;
     transition: all 0.3s ease-in-out;
+    padding: 0 0.6rem;
 }
 
 .indicator-group {
