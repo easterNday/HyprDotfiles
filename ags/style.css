@@ -1,3 +1,9 @@
 @import "/home/easternday/.config/hypr/styles/color.css";
 
+* {
+    all: unset;
+    font-size: 12px;
+}
+
 @import "./themes/bar.css";
+@import "./themes/launcher.css";

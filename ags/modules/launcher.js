@@ -1,4 +1,5 @@
 const { query } = await Service.import("applications")
+
 const WINDOW_NAME = "applauncher"
 
 /** @param {import('resource:///com/github/Aylur/ags/service/applications.js').Application} app */
@@ -50,7 +51,7 @@ const Applauncher = ({ width = 500, height = 500, spacing = 12 }) => {
         // to launch the first item on Enter
         on_accept: () => {
             // make sure we only consider visible (searched for) applications
-	    const results = applications.filter((item) => item.visible);
+            const results = applications.filter((item) => item.visible);
             if (results[0]) {
                 App.toggleWindow(WINDOW_NAME)
                 results[0].attribute.app.launch()
@@ -64,8 +65,8 @@ const Applauncher = ({ width = 500, height = 500, spacing = 12 }) => {
     })
 
     return Widget.Box({
+        class_name: 'launcher',
         vertical: true,
-        css: `margin: ${spacing * 2}px;`,
         children: [
             entry,
 
@@ -92,16 +93,16 @@ const Applauncher = ({ width = 500, height = 500, spacing = 12 }) => {
 }
 
 // there needs to be only one instance
-export const applauncher = Widget.Window({
+export const Launcher = Widget.Window({
     name: WINDOW_NAME,
-    setup: self => self.keybind("Escape", () => {
-        App.closeWindow(WINDOW_NAME)
-    }),
     visible: false,
-    keymode: "exclusive",
+    keymode: 'on-demand',
+    anchor: ["left", "top", "bottom"],
     child: Applauncher({
         width: 500,
-        height: 500,
         spacing: 12,
+    }),
+    setup: self => self.keybind("Escape", () => {
+        App.closeWindow(WINDOW_NAME)
     }),
 })

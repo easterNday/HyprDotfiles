@@ -4,21 +4,20 @@ import { Workspaces } from "./widgets/workspaces.js"
 import { Clock } from "./widgets/clock.js"
 
 import { sysTray } from './widgets/tray.js'
-import { bluetoothIndicator } from "./widgets/bluetooth.js"
-import { NetworkIndicator } from "./widgets/network.js"
-import { slider } from "./widgets/brightness.js"
-import { volumeIndicator } from "./widgets/audio.js"
-import { batteryProgress } from "./widgets/battery.js"
+import { indicatorGroup } from "./widgets/indicator-group.js"
 
 // layout of the bar
 function Left() {
     return Widget.Box({
         spacing: 8,
         children: [
-            warframe_logo,
-            Workspaces()
+            Widget.Button({
+                on_clicked: () => Utils.execAsync(['ags', '--toggle-window', 'applauncher']),
+                child: warframe_logo
+            }),
+        Workspaces()
         ],
-    })
+})
 }
 
 function Center() {
@@ -36,11 +35,7 @@ function Right() {
         spacing: 8,
         children: [
             sysTray(),
-            bluetoothIndicator(),
-            NetworkIndicator(),
-            slider,
-            volumeIndicator,
-            batteryProgress
+            indicatorGroup()
         ],
     })
 }

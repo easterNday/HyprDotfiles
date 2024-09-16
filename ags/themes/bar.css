@@ -1,11 +1,7 @@
-* {
-    font-size: 12px;
-}
-
 .bar-bg {
     all: unset;
     background: rgba(0, 0, 0, 0);
-    min-height: 30px;
+    min-height: 1rem;
 }
 
 .bar {
@@ -18,13 +14,11 @@
 .logo,
 .workspaces,
 .clock,
-.tray,
-.bluetooth,
-.network {
+.tray {
     all: unset;
     border-radius: 1.2rem;
-    border: 1px solid @blue;
-    margin: 0.2rem 0.1rem;
+    border: 0.1rem solid @blue;
+    margin: 0rem 1rem;
     padding: 0 0.5rem;
 }
 
@@ -68,6 +62,7 @@
 
 .clock {
     font-weight: bold;
+    background-color: @black;
 }
 
 .tray {
@@ -86,28 +81,57 @@
     transition: all 0.3s ease-in-out;
 }
 
-.bluetooth {
-    background-color: @blue;
-    color: @black;
+.indicator-group {
+    all: unset;
+    border-radius: 1rem;
+    border: 0.1rem solid @blue;
+}
+
+.indicator {
+    all: unset;
+    padding: 0 1rem;
+}
+
+.indicator:first-child {
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    padding-left: 0.5rem;
-    padding-right: 0.6rem;
-    margin-left: 0.3rem;
-    margin-right: 0;
 }
 
-.network {
-    background-color: @white;
-    color: @black;
+.indicator:last-child {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
-    padding-left: 0.6rem;
-    padding-right: 0.5rem;
-    margin-left: 0;
-    margin-right: 0.3rem;
+}
+
+.bluetooth {
+    color: @black;
+    background-color: @blue;
+}
+
+.network {
+    color: @black;
+    background-color: @orange;
+}
+
+.brightness {
+    background-color: @black;
+    color: @white;
+}
+
+
+.volume {
+    background-color: @blue;
+    color: @black;
+}
+
+.battery {
+    background-color: @white;
+    color: @black;
+}
+
+.battery.charging{
+    background-color: @red;
 }

@@ -1,0 +1,7 @@
+.launcher {
+    all: unset;
+    margin: 1.5rem;
+    border-radius: 1.2rem;
+    border: 0.1rem solid @blue;
+    background-color: @black;
+}
