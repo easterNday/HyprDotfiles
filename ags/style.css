@@ -22,3 +22,38 @@
     background-color: @white;
     border: 0.1rem solid @yellow;
 }
+
+
+/* ---------------------------------
+ *  图标和文字按钮
+ * ---------------------------------
+ */
+ .icon-button {
+    all: unset;
+    border-radius: 1.2rem;
+    border: 0.1rem dashed @yellow;
+    background-color: @red;
+}
+
+.icon-button image {
+    /* padding: 0 .5rem; */
+    padding-left: .5rem;
+    color: @black;
+}
+
+.icon-button label {
+    font-weight: bold;
+    /* margin-top: .4rem; */
+    margin-right: .5rem;
+    /* font-family: 'Blacklisted'; */
+    color: @black;
+}
+
+.icon-button:hover label {
+    background-color: @yellow;
+    transition: all 0.3s ease-in-out;
+    border-radius: 1rem;
+    padding: 0 1rem;
+    box-shadow: .4rem 0 .1rem @green;
+    font-weight: bold;
+}

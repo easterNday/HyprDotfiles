@@ -18,7 +18,7 @@
     border-radius: 1.2rem;
     color: @black;
     border: 0.1rem solid @red;
-    background-color: alpha(@white, 0.6);
+    background-color: alpha(@black, 0.6);
     font-size: 1.6em;
     font-weight: bold;
 }

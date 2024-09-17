@@ -1,12 +1,12 @@
-import { Workspaces } from "./widgets/Workspaces.js"
+import { Workspaces } from "./widgets/Bar/Workspaces.js"
 
-import { Clock } from "./widgets/Clock.js"
+import { Clock } from "./widgets/Bar/Clock.js"
 
-import { sysTray } from './widgets/Tray.js'
-import { Hyprpicker } from "./widgets/Hyprpicker.js"
-import { Screenshot } from "./widgets/Screenshot.js"
-import { indicatorGroup } from "./widgets/IndicatorGroup.js"
-import { AdvancedSettings } from "./widgets/AdvancedSettings.js"
+import { sysTray } from './widgets/Bar/Tray.js'
+import { Hyprpicker } from "./widgets/Bar/Hyprpicker.js"
+import { Screenshot } from "./widgets/Bar/Screenshot.js"
+import { indicatorGroup } from "./widgets/Bar/IndicatorGroup.js"
+import { AdvancedSettings } from "./widgets/Bar/AdvancedSettings.js"
 
 // layout of the bar
 function Left() {

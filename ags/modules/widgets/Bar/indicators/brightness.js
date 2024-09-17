@@ -1,4 +1,4 @@
-import brightness from '../../services/brightness.js';
+import brightness from '../../../services/brightness.js';
 
 const BRIGHTNESS_THRESHOLDS = [
     { threshold: 0.2, icon: 'display-brightness-off-symbolic' },

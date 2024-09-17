@@ -106,8 +106,10 @@
  * ---------------------------------
  */
 .tray {
-    background-color: @red;
+    color: @black;
+    background-color: @blue;
     min-width: 3rem;
+    border: 1px solid @red;
 }
 
 .tray button {
@@ -116,11 +118,10 @@
 }
 
 .tray button:hover {
-    background: @orange;
-    border: 1px solid @blue;
+    background: @green;
     border-radius: 3rem;
     transition: all 0.3s ease-in-out;
-    padding: 0 0.6rem;
+    padding: 0 1rem;
 }
 
 
@@ -155,18 +156,6 @@
     border-bottom-right-radius: 1rem;
 }
 
-/* .indicator-group .bluetooth:hover,
-.indicator-group .network:hover,
-.indicator-group .brightness:hover,
-.indicator-group .volume:hover,
-.indicator-group .battery:hover {
-    background: @white;
-    border-radius: 2rem;
-    min-width: 5rem;
-    transition: all 0.3s ease-in-out;
-    color: @yellow;
-} */
-
 .indicator-group .indicator:hover {
     background-color: @white;
     border-radius: 1rem;
@@ -175,36 +164,27 @@
     color: @yellow;
 }
 
-
-/* ---------------------------------
- *  图标和文字按钮
- * ---------------------------------
- */
-.icon-button {
-    all: unset;
-    border-radius: 1.2rem;
-    border: 0.1rem dashed @yellow;
-    background-color: @red;
+.indicator-group .bluetooth:hover {
+    color: @black;
+    background: @blue;
 }
 
-.icon-button image {
-    /* padding: 0 .5rem; */
-    padding-left: .5rem;
+.indicator-group .network:hover {
+    color: @black;
+    background: @green;
+}
+
+.indicator-group .brightness:hover {
+    color: @black;
+    background: @white;
+}
+
+.indicator-group .volume:hover {
     color: @white;
+    background: @purple;
 }
 
-.icon-button label {
-    font-weight: bold;
-    /* margin-top: .4rem; */
-    margin-right: .5rem;
-    /* font-family: 'Blacklisted'; */
-    color: @black
-}
-
-.icon-button:hover label {
-    background-color: @yellow;
-    transition: all 0.3s ease-in-out;
-    border-radius: 1rem;
-    min-width: 8rem;
-    box-shadow: .4rem 0 .1rem @green;
+.indicator-group .battery:hover {
+    color: @black;
+    background: @yellow;
 }

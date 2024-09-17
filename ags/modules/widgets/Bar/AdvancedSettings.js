@@ -1,10 +1,10 @@
 export const AdvancedSettings = () => Widget.Button({
     class_name: "icon-button",
     child: Widget.Box({
-        spacing: 12,
+        spacing: 8,
         children: [
             Widget.Icon({
-                icon: `${App.configDir}/icons/reboot.svg`,
+                icon: `am-settings-symbolic`,
             }),
             Widget.Label({
                 // css: "all: unset",
