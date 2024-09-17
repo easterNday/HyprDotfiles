@@ -6,7 +6,7 @@ import { sysTray } from './widgets/Bar/Tray.js'
 import { Hyprpicker } from "./widgets/Bar/Hyprpicker.js"
 import { Screenshot } from "./widgets/Bar/Screenshot.js"
 import { indicatorGroup } from "./widgets/Bar/IndicatorGroup.js"
-import { AdvancedSettings } from "./widgets/Bar/AdvancedSettings.js"
+import { Settings } from "./widgets/Bar/Settings.js"
 
 // layout of the bar
 function Left() {
@@ -51,7 +51,7 @@ function Right() {
             Hyprpicker(),
             Screenshot(),
             indicatorGroup(),
-            AdvancedSettings()
+            Settings()
         ],
     })
 }
