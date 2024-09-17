@@ -1,9 +1,16 @@
-@import "/home/easternday/.config/hypr/styles/color.css";
-
 @import "./themes/Bar.css";
 @import "./themes/Launcher.css";
 @import "./themes/Notification.css";
 @import "./themes/AdvancedSettings.css";
+
+@define-color white #fbecde;
+@define-color red #cc163a;
+@define-color orange #fba414;
+@define-color green #57c3c2;
+@define-color blue #c6e6e8;
+@define-color black #24273a;
+@define-color yellow #e2d849;
+@define-color purple #61649f;
 
 /* ---------------------------------
  *  圆形图标按钮
@@ -29,7 +36,7 @@
  *  图标和文字按钮
  * ---------------------------------
  */
- .icon-button {
+.icon-button {
     all: unset;
     border-radius: 1.2rem;
     border: 0.1rem dashed @yellow;

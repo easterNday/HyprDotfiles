@@ -9,3 +9,4 @@
 ## Credits
 
 - [Hyprland Wiki](https://wiki.hyprland.org/)
+- [XDG user directories](https://wiki.archlinux.org/title/XDG_user_directories)
