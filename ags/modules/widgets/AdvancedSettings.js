@@ -1,5 +1,5 @@
 export const AdvancedSettings = () => Widget.Button({
-    class_name: "exit",
+    class_name: "icon-button",
     child: Widget.Box({
         spacing: 12,
         children: [

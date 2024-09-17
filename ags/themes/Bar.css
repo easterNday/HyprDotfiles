@@ -14,12 +14,17 @@
     margin: .3rem 1rem;
 }
 
+/* ---------------------------------
+ *  Warframe 标志
+ * ---------------------------------
+ */
 .logo {
     all: unset;
     border-radius: 1.2rem;
     border: 0.1rem solid @blue;
-    margin: 0rem 1rem;
     padding: 0 0.6rem;
+    color: @black;
+    background-color: @blue;
 }
 
 .logo image {
@@ -34,22 +39,24 @@
     /* font-family: 'Blacklisted'; */
 }
 
+/* ---------------------------------
+ *  通用样式 1
+ * ---------------------------------
+ */
 .workspaces,
 .clock,
-.tray,
-.icon-button {
+.tray {
     all: unset;
     border-radius: 1.2rem;
     border: 0.1rem solid @blue;
-    margin: 0rem 1rem;
     padding: 0 0.5rem;
 }
 
-.logo {
-    color: @black;
-    background-color: @blue;
-}
 
+/* ---------------------------------
+ *  工作区
+ * ---------------------------------
+ */
 .workspaces {
     background-color: @black;
     margin: 100rem;
@@ -83,12 +90,21 @@
     margin: 0 -0.1rem;
 }
 
+
+/* ---------------------------------
+ *  时钟
+ * ---------------------------------
+ */
 .clock {
     font-weight: bold;
     color: @yellow;
     background-color: @black;
 }
 
+/* ---------------------------------
+ *  程序托盘
+ * ---------------------------------
+ */
 .tray {
     background-color: @red;
     min-width: 3rem;
@@ -107,6 +123,11 @@
     padding: 0 0.6rem;
 }
 
+
+/* ---------------------------------
+ *  系统指示信息组
+ * ---------------------------------
+ */
 .indicator-group {
     all: unset;
     border-radius: 1rem;
@@ -154,20 +175,25 @@
     color: @yellow;
 }
 
-.exit {
+
+/* ---------------------------------
+ *  图标和文字按钮
+ * ---------------------------------
+ */
+.icon-button {
     all: unset;
     border-radius: 1.2rem;
     border: 0.1rem dashed @yellow;
     background-color: @red;
 }
 
-.exit image {
+.icon-button image {
     /* padding: 0 .5rem; */
     padding-left: .5rem;
     color: @white;
 }
 
-.exit label {
+.icon-button label {
     font-weight: bold;
     /* margin-top: .4rem; */
     margin-right: .5rem;
@@ -175,7 +201,7 @@
     color: @black
 }
 
-.exit:hover label {
+.icon-button:hover label {
     background-color: @yellow;
     transition: all 0.3s ease-in-out;
     border-radius: 1rem;

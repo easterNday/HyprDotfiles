@@ -3,3 +3,22 @@
 @import "./themes/Bar.css";
 @import "./themes/Launcher.css";
 @import "./themes/Notification.css";
+
+/* ---------------------------------
+ *  圆形图标按钮
+ * ---------------------------------
+ */
+.circle-button {
+    all: unset;
+    border-radius: 1.2rem;
+    padding: 0 0.4rem;
+    border: 0.1rem solid @white;
+    color: @blue;
+    background-color: @black;
+}
+
+.circle-button:hover {
+    color: @black;
+    background-color: @white;
+    border: 0.1rem solid @yellow;
+}

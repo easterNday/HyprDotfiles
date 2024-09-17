@@ -3,6 +3,8 @@ import { Workspaces } from "./widgets/Workspaces.js"
 import { Clock } from "./widgets/Clock.js"
 
 import { sysTray } from './widgets/Tray.js'
+import { Hyprpicker } from "./widgets/Hyprpicker.js"
+import { Screenshot } from "./widgets/Screenshot.js"
 import { indicatorGroup } from "./widgets/IndicatorGroup.js"
 import { AdvancedSettings } from "./widgets/AdvancedSettings.js"
 
@@ -46,6 +48,8 @@ function Right() {
         spacing: 8,
         children: [
             sysTray(),
+            Hyprpicker(),
+            Screenshot(),
             indicatorGroup(),
             AdvancedSettings()
         ],
