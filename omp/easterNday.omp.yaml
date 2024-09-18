@@ -67,9 +67,9 @@ blocks:
     properties:
       fetch_version: true
     foreground: "#81ff91"
-  - type: php
+  - type: python
     style: powerline
-    template: "<#cc7eda> | </><#7eb8da>\ue73d</> {{ .Full }}"
+    template: "<#cc7eda> | </><#7eb8da></> {{ .Full }}"
     foreground: "#81ff91"
   - type: npm
     style: powerline
