@@ -15,6 +15,7 @@ function Left() {
         children: [
             Widget.Button({
                 class_name: "logo",
+                vpack: "center",
                 child: Widget.Box({
                     children: [
                         Widget.Icon({
@@ -34,12 +35,7 @@ function Left() {
 }
 
 function Center() {
-    return Widget.Box({
-        spacing: 8,
-        children: [
-            Clock()
-        ],
-    })
+    return Clock()
 }
 
 function Right() {
@@ -59,12 +55,13 @@ function Right() {
 export function Bar(monitor = 0) {
     return Widget.Window({
         name: `bar-${monitor}`, // name has to be unique
-        class_name: "bar-bg",
+        class_name: "topBar",
         monitor,
         anchor: ["top", "left", "right"],
         exclusivity: "exclusive",
+        vpack: "center",
         child: Widget.CenterBox({
-            class_name: "bar",
+            class_name: "barContainer",
             start_widget: Left(),
             center_widget: Center(),
             end_widget: Right(),

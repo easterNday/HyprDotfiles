@@ -1,0 +1,132 @@
+window.topBar {
+  * {
+    all: unset;
+    font-size: 1rem;
+    color: $font-color;
+  }
+  .barContainer {
+    min-height: 2rem;
+    padding: 0 1.2rem;
+    // background-color: opacify($background-color, 0.1);
+  }
+  // 左边 Logo 设置
+  .logo {
+    border-radius: 1.2rem;
+    border: 0.1rem solid invert($border-color);
+    background-color: invert($background-color);
+    padding: 0 0.6rem;
+    label {
+      margin-top: 0.25rem;
+      color: invert($font-color);
+    }
+    image {
+      padding-right: 0.5rem;
+    }
+    label {
+      font-weight: bold;
+      font-size: 1.2rem;
+      font-family: "Futura-Medium";
+      // font-family: 'Blacklisted';
+    }
+  }
+  // 工作区
+  .workspaces {
+    border-radius: 1.2rem;
+    border: 0.1rem solid $border-color;
+    margin: 0 0.6rem;
+    padding: 0 0.6rem;
+    background-color: $background-color;
+    button {
+      min-height: 1.5rem;
+      min-width: 1.5rem;
+      border-radius: 1.2rem;
+      padding: 0 0.5rem;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        min-width: 3rem;
+        label {
+          font-size: 1.4rem;
+          color: $hover-color;
+        }
+      }
+      &.focused {
+        background: #fbecde;
+        min-width: 3rem;
+        label {
+          font-size: 1rem;
+        }
+        &:hover {
+          min-width: 5rem;
+        }
+      }
+    }
+  }
+  // 时钟
+  .clock {
+    border-radius: 1.2rem;
+    border: 0.1rem solid $border-color;
+    margin: 0 0.6rem;
+    padding: 0 0.6rem;
+    background-color: $background-color;
+    label {
+      color: $font-color;
+      font-weight: bold;
+    }
+  }
+  // 托盘
+  .tray {
+    border-radius: 1.2rem;
+    border: 0.1rem solid $border-color;
+    margin: 0 0.6rem;
+    padding: 0 0.6rem;
+    color: $font-color;
+    background-color: $background-color;
+    min-width: 3rem;
+    button {
+      margin: 0 0.6rem;
+      &:hover {
+        border-radius: 1.2rem;
+        border: 0.1rem solid $border-color;
+        background-color: $hover-color;
+        transition: all 0.3s ease-in-out;
+        padding: 0 0.6rem;
+        image {
+          color: invert($font-color);
+        }
+      }
+    }
+  }
+  // 指示器
+  .indicator-group {
+    all: unset;
+    border-radius: 1rem;
+    border: 0.1rem solid $border-color;
+    background-color: $background-color;
+    .indicator {
+      all: unset;
+      padding: 0 0.6rem;
+      background-color: $background-color;
+      &:first-child {
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      &:last-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+      }
+      &:hover {
+        background-color: invert($background-color);
+        border-radius: 1.2rem;
+        min-width: 3rem;
+        transition: all 0.3s ease-in-out;
+        image {
+          color: invert($font-color);
+        }
+      }
+    }
+  }
+}

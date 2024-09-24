@@ -1,5 +1,5 @@
 export const Hyprpicker = () => Widget.Button({
-    class_name: "circle-button circular",
+    class_name: "circle-button",
     child: Widget.Box({
         spacing: 12,
         children: [

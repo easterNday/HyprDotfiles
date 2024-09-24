@@ -1,0 +1,19 @@
+// 圆形按钮
+button.circle-button {
+  all: unset;
+  box {
+    border-radius: 1rem;
+    border: 0.1rem solid $border-color;
+    background-color: $background-color;
+    padding: 0 0.6rem;
+  }
+  &:hover {
+    box {
+      image {
+        color: invert($font-color);
+      }
+      background-color: $hover-color;
+      border: 0.1rem solid invert($border-color);
+    }
+  }
+}
