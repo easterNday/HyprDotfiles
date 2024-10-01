@@ -5,7 +5,7 @@ button.circle-button {
     border-radius: 1rem;
     border: 0.1rem solid $border-color;
     background-color: $background-color;
-    padding: 0 0.6rem;
+    padding: 0.5rem 0.5rem;
   }
   &:hover {
     box {
@@ -14,6 +14,27 @@ button.circle-button {
       }
       background-color: $hover-color;
       border: 0.1rem solid invert($border-color);
+    }
+  }
+}
+// 图形-文字按钮
+button.icon-button {
+  all: unset;
+  box {
+    border-radius: 1rem;
+    border: 0.1rem solid $border-color;
+    background-color: $background-color;
+    image {
+      border-radius: 1rem;
+      border: 0.1rem solid $border-color;
+      background-color: invert($background-color);
+      color: invert($font-color);
+      padding: 0 0.5rem;
+      margin: 0 0;
+    }
+    label {
+      color: $font-color;
+      padding: 0 1rem 0 0.5rem;
     }
   }
 }

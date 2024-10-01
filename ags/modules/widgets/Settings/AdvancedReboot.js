@@ -1,54 +1,12 @@
-const Lock = () => Widget.Button({
-    class_name: "circle-button",
-    child: Widget.Box({
-        spacing: 12,
-        children: [
-            Widget.Icon({
-                icon: `screen-lock-symbolic`,
-            }),
-        ],
-    }),
-    onClicked: () => Utils.execAsync(['hyprlock', '--immediate'])
-})
+import { CircleButton } from "../CircleButton/index.js"
 
-const Logout = () => Widget.Button({
-    class_name: "circle-button",
-    child: Widget.Box({
-        spacing: 12,
-        children: [
-            Widget.Icon({
-                icon: `system-log-out-symbolic`,
-            }),
-        ],
-    }),
-    onClicked: () => Utils.execAsync(['hyprctl', 'dispatch', 'exit', '0'])
-})
+const Lock = CircleButton("LockScreen", `screen-lock-symbolic`, () => Utils.execAsync(['hyprlock', '--immediate']))
 
-const Shutdown = () => Widget.Button({
-    class_name: "circle-button",
-    child: Widget.Box({
-        spacing: 12,
-        children: [
-            Widget.Icon({
-                icon: `/usr/share/icons/Colloid-Red-Dark/actions/symbolic/system-shutdown-symbolic.svg`,
-            }),
-        ],
-    }),
-    onClicked: () => Utils.execAsync(['systemctl', 'poweroff'])
-})
+const Logout = CircleButton("Logout", `system-log-out-symbolic`, () => Utils.execAsync(['hyprctl', 'dispatch', 'exit', '0']))
 
-const Reboot = () => Widget.Button({
-    class_name: "circle-button",
-    child: Widget.Box({
-        spacing: 12,
-        children: [
-            Widget.Icon({
-                icon: `system-reboot-symbolic`,
-            }),
-        ],
-    }),
-    onClicked: () => Utils.execAsync(['systemctl', 'reboot'])
-})
+const Shutdown = CircleButton("Shutdown", `system-shutdown-symbolic`, () => Utils.execAsync(['systemctl', 'poweroff']))
+
+const Reboot = CircleButton("Reboot", `system-reboot-symbolic`, () => Utils.execAsync(['systemctl', 'reboot']))
 
 export const AdvancedReboot = ({ spacing = 12 }) => Widget.Box({
     spacing: spacing,
@@ -57,9 +15,9 @@ export const AdvancedReboot = ({ spacing = 12 }) => Widget.Box({
     hpack: "end",
     vpack: "center",
     children: [
-        Lock(),
-        Logout(),
-        Shutdown(),
-        Reboot(),
+        Lock,
+        Logout,
+        Shutdown,
+        Reboot,
     ]
 })

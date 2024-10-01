@@ -3,10 +3,9 @@ import { Workspaces } from "../widgets/Bar/Workspaces.js"
 import { Clock } from "../widgets/Bar/Clock.js"
 
 import { sysTray } from '../widgets/Bar/Tray.js'
-import { Hyprpicker } from "../widgets/Bar/Hyprpicker.js"
-import { Screenshot } from "../widgets/Bar/Screenshot.js"
+import { CircleButton } from "../widgets/CircleButton/index.js"
 import { indicatorGroup } from "../widgets/Bar/IndicatorGroup.js"
-import { Settings } from "../widgets/Bar/Settings.js"
+import { IconButton } from "../widgets/IconButton/index.js"
 
 // layout of the bar
 function Left() {
@@ -44,10 +43,10 @@ function Right() {
         spacing: 8,
         children: [
             sysTray(),
-            Hyprpicker(),
-            Screenshot(),
+            CircleButton("Hyprpicker", "color-picker-symbolic", () => Utils.execAsync(['hyprpicker', '-a'])),
+            CircleButton("Screenshot", "accessories-screenshot-symbolic", () => Utils.execAsync(['hyprshot', '-m', 'region'])),
             indicatorGroup(),
-            Settings()
+            IconButton("Settings", "preferences-system-symbolic", "设置", () => Utils.execAsync(['ags', '--toggle-window', 'AdvancedSettings']))
         ],
     })
 }

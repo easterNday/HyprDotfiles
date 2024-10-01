@@ -6,7 +6,7 @@ button.circle-button box {
   border-radius: 1rem;
   border: 0.1rem solid #56b6c2;
   background-color: #282c34;
-  padding: 0 0.6rem;
+  padding: 0.5rem 0.5rem;
 }
 
 button.circle-button:hover box {
@@ -16,6 +16,30 @@ button.circle-button:hover box {
 
 button.circle-button:hover box image {
   color: #544d40;
+}
+
+button.icon-button {
+  all: unset;
+}
+
+button.icon-button box {
+  border-radius: 1rem;
+  border: 0.1rem solid #56b6c2;
+  background-color: #282c34;
+}
+
+button.icon-button box image {
+  border-radius: 1rem;
+  border: 0.1rem solid #56b6c2;
+  background-color: #d7d3cb;
+  color: #544d40;
+  padding: 0 0.5rem;
+  margin: 0 0;
+}
+
+button.icon-button box label {
+  color: #abb2bf;
+  padding: 0 1rem 0 0.5rem;
 }
 
 window.topBar * {
