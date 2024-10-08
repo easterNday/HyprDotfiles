@@ -268,3 +268,59 @@ window.launcher .launcherContainer .scroll button:focus {
 window.launcher .launcherContainer .scroll button:focus label {
   color: #544d40;
 }
+
+window.notification-popups box.notifications {
+  padding: 0.5rem;
+}
+
+window.notification-popups .notification {
+  border-radius: 1.2rem;
+  border: 0.1rem solid #56b6c2;
+  background-color: #282c34;
+  color: #abb2bf;
+  min-width: 20rem;
+  margin: 0.5rem;
+}
+
+window.notification-popups .notification .icon {
+  min-width: 5rem;
+  min-height: 5rem;
+}
+
+window.notification-popups .notification .icon image {
+  color: #abb2bf;
+  font-size: 3rem;
+  margin: 1rem;
+  color: #abb2bf;
+}
+
+window.notification-popups .notification .title {
+  color: #abb2bf;
+  font-size: 2em;
+}
+
+window.notification-popups .notification .body {
+  color: #abb2bf;
+  font-size: 1.2em;
+}
+
+window.notification-popups .notification.critical {
+  border: 1px solid #e06c75;
+}
+
+window.notification-popups .notification .actions {
+  margin: 0.5rem;
+}
+
+window.notification-popups .notification .actions .action-button {
+  margin: 0 0.4rem;
+  margin-top: 0.8rem;
+}
+
+window.notification-popups .notification .actions .action-button:first-child {
+  margin-left: 0;
+}
+
+window.notification-popups .notification .actions .action-button:last-child {
+  margin-right: 0;
+}

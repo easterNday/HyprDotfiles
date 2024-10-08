@@ -1,0 +1,50 @@
+window.notification-popups {
+  box.notifications {
+    padding: 0.5rem;
+  }
+  .notification {
+    border-radius: 1.2rem;
+    border: 0.1rem solid $border-color;
+    background-color: $background-color;
+    color: $font-color;
+    min-width: 20rem;
+    margin: 0.5rem;
+    .icon {
+      min-width: 5rem;
+      min-height: 5rem;
+      image {
+        color: $font-color;
+        font-size: 3rem;
+        margin: 1rem;
+        color: $font-color;
+      }
+    }
+    .title {
+      color: $font-color;
+      font-size: 2em;
+    }
+
+    .body {
+      color: $font-color;
+      font-size: 1.2em;
+    }
+
+    &.critical {
+      border: 1px solid $red;
+    }
+
+    .actions {
+      margin: 0.5rem;
+      .action-button {
+        margin: 0 0.4rem;
+        margin-top: 0.8rem;
+        &:first-child {
+          margin-left: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

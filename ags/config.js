@@ -35,5 +35,5 @@ App.config({
         Notifications(),
         Calendar(),
         AdvancedSettings(),
-    ]
+    ],
 });
