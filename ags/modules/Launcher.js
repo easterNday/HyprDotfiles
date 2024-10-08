@@ -75,11 +75,10 @@ const Applauncher = ({ spacing = 12 }) => {
     // scroll.set_valign(Gtk.Align.FILL);
 
     return Widget.Box({
-        class_name: 'launcher',
+        class_name: 'launcherContainer',
         vertical: true,
         children: [
             entry,
-
             scroll
         ],
         setup: self => self.hook(App, (_, windowName, visible) => {
@@ -98,7 +97,7 @@ const Applauncher = ({ spacing = 12 }) => {
 
 export const Launcher = () => Widget.Window({
     name: WINDOW_NAME,
-    class_name: "launcher-bg",
+    class_name: "launcher",
     visible: false,
     keymode: 'on-demand',
     anchor: ["left", "top", "bottom"],

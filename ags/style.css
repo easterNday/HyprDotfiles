@@ -189,3 +189,82 @@ window.topBar .indicator-group .indicator:hover {
 window.topBar .indicator-group .indicator:hover image {
   color: #544d40;
 }
+
+window.launcher * {
+  all: unset;
+  font-size: 1rem;
+  color: #abb2bf;
+}
+
+window.launcher .launcherContainer {
+  border-radius: 1.2rem;
+  border: 0.1rem solid #56b6c2;
+  background-color: #282c34;
+  padding: 0 0.6rem;
+  margin: 1rem;
+  min-width: 30rem;
+}
+
+window.launcher .launcherContainer entry.search {
+  border-radius: 1.2rem;
+  border: 0.1rem solid #a9493d;
+  background-color: #d7d3cb;
+  min-height: 3.5rem;
+  margin: 1rem 0.5rem;
+  padding: 0 1rem;
+  color: #544d40;
+  font-size: 2rem;
+}
+
+window.launcher .launcherContainer entry.search label {
+  margin: 0.5rem 0;
+}
+
+window.launcher .launcherContainer .scroll {
+  margin: 1rem 0.5rem;
+}
+
+window.launcher .launcherContainer .scroll button {
+  border-radius: 1.2rem;
+  border: 0.1rem solid #56b6c2;
+  background-color: #282c34;
+  padding: 0.5rem 0;
+}
+
+window.launcher .launcherContainer .scroll button image {
+  padding: 0 0.5rem;
+}
+
+window.launcher .launcherContainer .scroll button label {
+  font-size: 1.2rem;
+}
+
+window.launcher .launcherContainer .scroll button:selected {
+  border-radius: 1.2rem;
+  border: 0.1rem solid #a9493d;
+  background-color: #d7d3cb;
+}
+
+window.launcher .launcherContainer .scroll button:selected label {
+  color: #544d40;
+}
+
+window.launcher .launcherContainer .scroll button:hover {
+  border-radius: 1.2rem;
+  border: 0.1rem solid #a9493d;
+  background-color: #d7d3cb;
+}
+
+window.launcher .launcherContainer .scroll button:hover label {
+  color: #544d40;
+}
+
+window.launcher .launcherContainer .scroll button:focus {
+  border-radius: 1.2rem;
+  border: 0.1rem solid #a9493d;
+  background-color: #d7d3cb;
+}
+
+window.launcher .launcherContainer .scroll button:focus label {
+  color: #544d40;
+}
