@@ -36,7 +36,7 @@ function Notification(n) {
         xalign: 0,
         justification: "left",
         hexpand: true,
-        max_width_chars: 24,
+        max_width_chars: 27,
         truncate: "end",
         wrap: true,
         label: n.summary,
@@ -51,6 +51,7 @@ function Notification(n) {
         justification: "left",
         label: n.body,
         wrap: true,
+        max_width_chars: 27,
     })
 
     const actions = Widget.Box({

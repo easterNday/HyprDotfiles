@@ -278,8 +278,9 @@ window.notification-popups .notification {
   border: 0.1rem solid #56b6c2;
   background-color: #282c34;
   color: #abb2bf;
-  min-width: 20rem;
-  margin: 0.5rem;
+  min-width: 25rem;
+  padding: 0.5rem;
+  margin-bottom: .5rem;
 }
 
 window.notification-popups .notification .icon {
@@ -296,7 +297,7 @@ window.notification-popups .notification .icon image {
 
 window.notification-popups .notification .title {
   color: #abb2bf;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 window.notification-popups .notification .body {

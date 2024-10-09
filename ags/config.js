@@ -30,9 +30,9 @@ App.config({
     style: `${App.configDir}/style.css`,
     // 定义 App 的窗口组件列表
     windows: [
+        Notifications(),
         Bar(),
         Launcher(),
-        Notifications(),
         Calendar(),
         AdvancedSettings(),
     ],
