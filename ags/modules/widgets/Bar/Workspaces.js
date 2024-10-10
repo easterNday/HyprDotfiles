@@ -9,8 +9,8 @@ export const Workspaces = () => {
     const activeId = hyprland.active.workspace.bind("id");
     return Widget.EventBox({
         class_name: "workspaces",
-        onScrollUp: () => dispatch('-1'),
-        onScrollDown: () => dispatch('+1'),
+        // onScrollUp: () => dispatch('-1'),
+        // onScrollDown: () => dispatch('+1'),
         child: Widget.Box({
             children: Array.from({ length: 10 }, (_, i) => i + 1).map(i => Widget.Button({
                 attribute: i,
